@@ -33,6 +33,18 @@ const App = () => {
             <Route  path="/Home">
               <Home />
             </Route>           
+            <Route  path="/News">
+              <News />
+            </Route>           
+            <Route  path="/Destination">
+              <Destination />
+            </Route>           
+            <Route  path="/Blog">
+              <Blog />
+            </Route>           
+            <Route  path="/Contact">
+              <Contact />
+            </Route>           
             <Route  path="/booking/:showCardName">
               <Booking></Booking>
             </Route>

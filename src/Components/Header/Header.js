@@ -8,25 +8,27 @@ const Header = () => {
         <>
              <Container >
                 <Navbar bg="transparent" variant="dark">
-                <Navbar.Brand href=""><img className="logo" src={logo} alt=""/></Navbar.Brand>
+                <Nav.Item as="li" >
+                        <Nav.Link  href="/Home"  className='text-white'><img className="logo" src={logo} alt=""/></Nav.Link>
+                    </Nav.Item>
             <Form inline>
                 <FormControl type="text" placeholder="Search your destination" className="mr-sm-2 input search-bar" />
             </Form>
                 <Nav defaultActiveKey="#" as="ul" className="navi">
                     <Nav.Item as="li" >
-                        <Nav.Link  href=""  className='text-white'>News</Nav.Link>
+                        <Nav.Link  href="/News"  className='text-white'>News</Nav.Link>
                     </Nav.Item>
                     <Nav.Item as="li" >
-                        <Nav.Link  href="#"  className='text-white'>Destination</Nav.Link>
+                        <Nav.Link  href="/Destination"  className='text-white'>Destination</Nav.Link>
                     </Nav.Item>
                     <Nav.Item as="li">
-                        <Nav.Link  href="#"  className='text-white'>Blog</Nav.Link>
+                        <Nav.Link  href="/Blog"  className='text-white'>Blog</Nav.Link>
                     </Nav.Item>
                     <Nav.Item as="li">
-                        <Nav.Link  href="#"  className='text-white'>Contact</Nav.Link>
+                        <Nav.Link  href="Contact"  className='text-white'>Contact</Nav.Link>
                     </Nav.Item>
                     <Nav.Item as="li">
-                        <Nav.Link  href="#"  className='text-white btn btn-warning'>Login</Nav.Link>
+                        <Nav.Link  href="/Login"  className='text-white btn btn-warning'>Login</Nav.Link>
                     </Nav.Item>
                 </Nav>
                 </Navbar>                                   

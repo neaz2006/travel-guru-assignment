@@ -8,7 +8,7 @@ const Header = () => {
         <>
              <Container >
                 <Navbar bg="transparent" variant="dark">
-                <Nav.Item as="li" >
+                <Nav.Item  >
                         <Nav.Link  href="/Home"  className='text-white'><img className="logo" src={logo} alt=""/></Nav.Link>
                     </Nav.Item>
             <Form inline>
@@ -28,7 +28,7 @@ const Header = () => {
                         <Nav.Link  href="Contact"  className='text-white'>Contact</Nav.Link>
                     </Nav.Item>
                     <Nav.Item as="li">
-                        <Nav.Link  href="/Login"  className='text-white btn btn-warning'>Login</Nav.Link>
+                        <a href="/Login"  className='text-white btn btn-warning'>Login</a>
                     </Nav.Item>
                 </Nav>
                 </Navbar>                                   

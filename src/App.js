@@ -13,10 +13,10 @@ import News from './Components/News/News';
 import Destination from './Components/Home/Home';
 import Blog from './Components/Blog/Blog';
 import Contact from './Components/Contact/Contact';
-import Login from './Components/Login/Login';
 import Booking from './Components/Booking/Booking';
 import ShowGoogleMap from './Components/ShowGoogleMap/ShowGoogleMap';
 import PrivateRoute from './Components/Private Route/PrivateRoute';
+import Login from './Components/Login/Login';
 export const UserContext = createContext();
 const App = () => {
   const [loggedInUser, setLoggedInUser]=useState({});
@@ -45,14 +45,14 @@ const App = () => {
             <Route  path="/Contact">
               <Contact />
             </Route>           
-            <Route  path="/booking/:showCardName">
-              <Booking></Booking>
-            </Route>
             <Route  path="/Login">
-              <Login></Login>
-            </Route>   
+              <Login />
+            </Route>           
+            <Route  path="/booking/:showCardName">
+              <Booking/>
+            </Route>  
             <PrivateRoute  path="/ShowGoogleMap">
-              <ShowGoogleMap></ShowGoogleMap>
+              <ShowGoogleMap/>
             </PrivateRoute>           
           <Route  path="*">
               <NoMatch></NoMatch>

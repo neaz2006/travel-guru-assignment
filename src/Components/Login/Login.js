@@ -23,7 +23,7 @@ const Login = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const history = useHistory();
     const location = useLocation();
-    let { from } = location.state || { from: { pathname: "/" } };
+    let {from } = location.state || { from: { pathname: "/" } };
     const googleSignIn = () => {
         handleGoogleSignIn()
             .then(res => {
@@ -59,8 +59,6 @@ const Login = () => {
     const handleBlur = (event) => {
 
         let isFieldValid = true;
-
-        // console.log(event.target.name,event.target.value )
 
         if (event.target.name === 'email') {
 

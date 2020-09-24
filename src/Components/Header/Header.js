@@ -1,7 +1,7 @@
 import React from 'react';
 import './Header.css'
 import logo from '../Image/Logo.png'
-import { Container, Form, FormControl, Nav, Navbar } from 'react-bootstrap';
+import { Container, Form, FormControl, Nav, Navbar} from 'react-bootstrap';
 
 const Header = () => {
     return (
@@ -28,7 +28,7 @@ const Header = () => {
                         <Nav.Link  href="Contact"  className='text-white'>Contact</Nav.Link>
                     </Nav.Item>
                     <Nav.Item as="li">
-                        <a href="/Login"  className='text-white btn btn-warning'>Login</a>
+                        <a href=" "  className='text-white btn btn-warning'>Login</a>
                     </Nav.Item>
                 </Nav>
                 </Navbar>                                   

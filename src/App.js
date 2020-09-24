@@ -1,26 +1,55 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { createContext, useState } from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import Home from './Components/Home/Home';
 import './App.css';
-
-function App() {
+import NoMatch from './Components/NoMatch/NoMatch';
+import Header from './Components/Header/Header';
+import News from './Components/News/News';
+import Destination from './Components/Home/Home';
+import Blog from './Components/Blog/Blog';
+import Contact from './Components/Contact/Contact';
+import Login from './Components/Login/Login';
+import Booking from './Components/Booking/Booking';
+import ShowGoogleMap from './Components/ShowGoogleMap/ShowGoogleMap';
+import PrivateRoute from './Components/Private Route/PrivateRoute';
+export const UserContext = createContext();
+const App = () => {
+  const [loggedInUser, setLoggedInUser]=useState({});
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
+    <div className='main'>
+      
+      <Router>
+      <Header></Header>
+         <Switch>
+           <Route exact path="/">
+              <Home></Home>
+           </Route>
+            <Route  path="/Home">
+              <Home />
+            </Route>           
+            <Route  path="/booking/:showCardName">
+              <Booking></Booking>
+            </Route>
+            <Route  path="/Login">
+              <Login></Login>
+            </Route>   
+            <PrivateRoute  path="/ShowGoogleMap">
+              <ShowGoogleMap></ShowGoogleMap>
+            </PrivateRoute>           
+          <Route  path="*">
+              <NoMatch></NoMatch>
+            </Route>
+         </Switch>
+       </Router>      
     </div>
+    </UserContext.Provider>
   );
-}
+};
 
 export default App;

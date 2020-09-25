@@ -124,12 +124,12 @@ const Login = () => {
 
                                 {newUser &&
 
-                                    <input className="inputText" type="text" onBlur={handleBlur} placeholder="Your First Name" required />
+                                    <input className="inputText" type="text" onBlur={handleBlur} placeholder="Your First Name" required  style={{ color: 'black'}}/>
 
                                 }
                                 <br />
                                 {newUser &&
-                                    <input className="inputText" type="text" onBlur={handleBlur} placeholder="Your Last Name" required />
+                                    <input className="inputText" type="text" onBlur={handleBlur} placeholder="Your Last Name" required style={{ color: 'black'}} />
 
                                 }
                                 <br />
@@ -139,13 +139,13 @@ const Login = () => {
 
 
                                 {
-                                    newUser && <input className="inputText" type="password" onBlur={handleBlur} placeholder='Confirm Your password' name="password" id="" required />
+                                    newUser && <input className="inputText" type="password" onBlur={handleBlur} placeholder='Confirm Your password' name="password" id="" required style={{ color: 'black'}}/>
                                  }
                                 <p style={{ marginLeft: '20%' }}> <br/>
 
                                     {(!newUser) &&
 
-                                        <input type="checkbox" name="Remember Me" id=""  style={{  margin: 'auto', }}/>
+                                        <input type="checkbox" name="Remember Me" id=""  style={{  margin: 'auto' }}/>
                                     } Remember Me
                                 </p>
                                 <button className='btn btn-block' style={{ backgroundColor: 'goldenrod', width: '50%', borderRadius: '20px', fontSize: '20px', margin: 'auto' }} type="submit">
@@ -165,7 +165,7 @@ const Login = () => {
                                     : "Do not have an account ?? Create a new account"
                                 }
 
-                                <input type='checkbox' onChange={() => setNewUser(!newUser)} name='' id="" />
+                                <input type='checkbox' onChange={() => setNewUser(!newUser)} name='' id=""   style={{color: 'black'}}/>
                                  </p>
                         </div>
                         <p style={{ color: 'red' }}>{user.error}</p>
